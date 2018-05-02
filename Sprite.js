@@ -82,7 +82,7 @@ var Sprite = function(spritesArray, fps, loop){
       if(!this.loop){
         this.index = constrain(this.passedFrame + this.start, this.start, this.end - 1);
       }else{
-        this.index = this.start + floor(this.passedFrame % (this.end - 1 - this.start));
+        this.index = this.start + floor(this.passedFrame % (this.end - 1 - this.start + 1));
       }
     }
   }
@@ -115,7 +115,7 @@ var Sprite = function(spritesArray, fps, loop){
   }
 
   this.pause = function(){
-    this.boolPause = true;
+    this.boolPause = !this.boolPause;
   }
 
   this.stop = function(){
