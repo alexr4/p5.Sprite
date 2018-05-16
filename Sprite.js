@@ -92,7 +92,7 @@ var Sprite = function(spritesArray, fps, loop){
       this.boolStop = true;
       this.lastPassedFrame = this.passedFrame;
       this.index = this.end - 1;
-      if(this.spriteName.length > 0 && this.loop = this.spriteLoop[this.animationIndex]){
+      if(this.spriteName.length > 0 && this.spriteLoop[this.animationIndex]){
         this.resetAnimation();
         this.play();
       }
